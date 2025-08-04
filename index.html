@@ -19,10 +19,10 @@
   </div>
   <nav role="navigation" aria-label="메인 메뉴">
     <ul>
-      <li><a href="#about">회사 소개</a></li>
-      <li><a href="#business">사업</a></li>
-      <li><a href="#services">서비스</a></li>
-      <li><a href="#contact">문의하기</a></li>
+      <li><a href="#intro" class="nav-link">회사 소개</a></li>
+      <li><a href="#business" class="nav-link">사업</a></li>
+      <li><a href="#service" class="nav-link">서비스</a></li>
+      <li><a href="#contact" class="nav-link">문의하기</a></li>
     </ul>
   </nav>
 </header>
@@ -109,5 +109,15 @@
     </footer>
 
 <script src="js/script.js"></script>
+<script>
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.forEach(l => l.classList.remove('active')); // 모든 항목의 active 제거
+      link.classList.add('active'); // 클릭된 항목에 active 추가
+    });
+  });
+</script>
 </body>
 </html>
