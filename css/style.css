@@ -144,7 +144,9 @@ a[href^="mailto:"] {
 
 .portfolio-grid img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  max-width: 100%;        /* 부모 너비 이상 안 넘음 */
+  height: auto;           /* 자동 비율 유지 */
+  max-height: 400px;      /* 필요 시 제한 (조절 가능) */
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
